@@ -28,5 +28,5 @@ let camelize = (str) => {
 
 
 //Test
-let test = camelize("background-color");
+let test = camelize("a-random-function-that-needs-to-be-camelized");
 console.log(test);
