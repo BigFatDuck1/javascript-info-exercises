@@ -1,3 +1,3 @@
 # Exercises on Javascript Objects from Javascript.info
 
-https://javascript.info/object#tasks
+https://javascript.info
