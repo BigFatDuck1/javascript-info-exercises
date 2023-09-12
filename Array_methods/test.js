@@ -1,9 +1,3 @@
-let upperFunction = (item) => {
-    let first_letter = item.charAt(0).toUpperCase();
-    item = item.slice(1);
-    item = first_letter + item;
-    console.log(item)
-    return item;
-}
+let arr = [1, 2, 3];
 
-console.log(upperFunction("hello"));
+console.log(arr[1]);
