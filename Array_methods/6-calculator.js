@@ -14,6 +14,20 @@ let sumAll = (...array) => {
     return result;
 } 
 
-console.log(sumAll(1,2,3,4,5)) //Test
+console.log(sumAll(1,2,3,4,5)) // Expected: 15
 
+//Minus function
+let minusAll = (...array) => {
+    let result = array[0];
+    for (let element of array) {
+        //Skip first element
+        if (element == array[0]) {
+            continue;
+        }        
+        result -= element;
+    }
+    return result;
+}
+
+console.log(minusAll(10,5,3)); // Expected: 2
 
