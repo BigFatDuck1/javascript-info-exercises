@@ -4,17 +4,73 @@
 //and returns the result. 
 //Should understand plus + and minus -.
 
+function Calculator() {
+    this.calculate = (string_input) => {
+        //Split into individual characters
+        string_input = string_input.split("");
+        //console.log(string_input);
+        //Set result to 0
+        let result = 0;
+        let previous_symbol = "+";
+        //Understands + and -
+        for (let index in string_input) {
+            if (typeof parseInt(string_input[index]) == "number" && string_input[index] != "+" && string_input[index] != "-") {
+                if (previous_symbol == "+") {
+                    result += parseInt(string_input[index]);
+                }
+                else if (previous_symbol == "-") {
+                    result -= parseInt(string_input[index]);
+                }
+            }
+            else if (string_input[index] == "+") {
+                previous_symbol = "+";
+            }
+            else if (string_input[index] == "-") {
+                previous_symbol = "-";
+
+            }
+        }
+
+        return result;
+    }
+}
+
+let calc = new Calculator; 
+
+let answer = calc.calculate("10+5");
+console.log(answer);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Unused stuff
 //Sum function
 let sumAll = (...array) => {
     let result = 0;
-    for (let element in array) {
-        result += parseInt(array[element]); //Add each element in args array to result
+    for (let index in array) {
+        result += parseInt(array[index]); //Add each element in args array to result
         
     }
     return result;
 } 
 
-console.log(sumAll(1,2,3,4,5)) // Expected: 15
+//console.log(sumAll(1,2,3,4,5)) // Expected: 15
 
 //Minus function
 let minusAll = (...array) => {
@@ -29,5 +85,5 @@ let minusAll = (...array) => {
     return result;
 }
 
-console.log(minusAll(10,5,3)); // Expected: 2
+//console.log(minusAll(10,5,3)); // Expected: 2
 
