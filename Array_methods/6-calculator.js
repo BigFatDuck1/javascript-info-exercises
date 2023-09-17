@@ -7,7 +7,10 @@
 function Calculator() {
     this.calculate = (string_input) => {
         //Split into individual characters
-        string_input = string_input.split("");
+        symbol_array = string_input.split(/[0-9]/);
+        symbol_array = symbol_array.slice(1,-1); //Removes the quotation mark from the string
+        string_input = string_input.split(/[+-]/);
+        console.log(string_input, symbol_array);
         //console.log(string_input);
         //Set result to 0
         let result = 0;
@@ -37,7 +40,7 @@ function Calculator() {
 
 let calc = new Calculator; 
 
-let answer = calc.calculate("10+5");
+let answer = calc.calculate("1+5-6");
 console.log(answer);
 
 
