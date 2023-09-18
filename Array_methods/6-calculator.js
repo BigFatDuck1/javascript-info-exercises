@@ -8,11 +8,6 @@
 function Calculator() {
 
     this.calculate = (string_input) => {
-        //Remove any space in string
-        // string_input = string_input.split();
-        // string_input = string_input.filter((element) => {
-        //     return element != " ";
-        // })
 
         //Split into individual characters
         symbol_array = string_input.split(/[0-9]/);
@@ -62,7 +57,7 @@ function Calculator() {
 
 let calc = new Calculator; 
 
-let answer = calc.calculate("100 - 50 - 50");
+let answer = calc.calculate("100+4+5+6");
 console.log(answer);
 
 

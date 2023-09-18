@@ -7,4 +7,5 @@ let removeSpace = (str) => {
 }
 
 let result = removeSpace("1 -   2 - 3");
+result = result.join("");
 console.log(result);
