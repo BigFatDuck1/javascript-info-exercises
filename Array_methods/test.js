@@ -1,3 +1,10 @@
-let arr = [1, 2, 3];
+let removeSpace = (str) => {
+    str = str.split("");
+    str = str.filter((element) => {
+        return element != " ";
+    })
+    return str;
+}
 
-console.log(arr[1]);
+let result = removeSpace("1 -   2 - 3");
+console.log(result);
