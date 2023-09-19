@@ -9,4 +9,5 @@ let removeSpace = (str) => {
 let result = removeSpace("1 -   2 - 3");
 result = result.join("");
 result = [...result];
-console.log(result);
+//console.log(result);
+console.log(100/5);
