@@ -9,6 +9,14 @@ function Calculator() {
 
     this.calculate = (string_input) => {
 
+        //Remove space from string
+        string_input = string_input.split("");
+        string_input = string_input.filter((element) => {
+            return element != " ";
+        })
+        string_input = string_input.join("");
+        console.log(string_input);
+
         //Split into individual characters
         symbol_array = string_input.split(/[0-9]/);
         symbol_array = symbol_array.slice(1,-1); //Removes the quotation mark from the string
@@ -57,7 +65,7 @@ function Calculator() {
 
 let calc = new Calculator; 
 
-let answer = calc.calculate("100+4+5+6");
+let answer = calc.calculate("100 + 4 + 5 + 6");
 console.log(answer);
 
 

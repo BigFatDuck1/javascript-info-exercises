@@ -1,5 +1,5 @@
 let removeSpace = (str) => {
-    str = str.split("");
+    str = str.split('');
     str = str.filter((element) => {
         return element != " ";
     })
@@ -8,4 +8,5 @@ let removeSpace = (str) => {
 
 let result = removeSpace("1 -   2 - 3");
 result = result.join("");
+result = [...result];
 console.log(result);
