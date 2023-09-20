@@ -7,8 +7,10 @@ let mapName = (users_array) => {
 
     result = users_array.map((element) => {
         //todo
+        return element["name"];
     })
     
+    return result;
 }
 
 //Test
@@ -22,4 +24,4 @@ let names = [];
 
 names = mapName(users);
 
-console.log(names);
+console.log(names); // John, Pete, Mary
