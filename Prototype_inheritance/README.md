@@ -1,0 +1,1 @@
+[Prototype inheritance tasks](https://javascript.info/prototype-inheritance#tasks)
