@@ -1,3 +1,3 @@
-# Exercises on Javascript Objects from Javascript.info
+# Exercises on Javascript from Javascript.info
 
-https://javascript.info
+[Javascript.info](https://javascript.info)
