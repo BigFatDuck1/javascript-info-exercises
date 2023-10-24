@@ -21,3 +21,11 @@ let pockets = {
 };
 
 // Solution starts here
+
+//Pocket inherits bed
+//Bed inherits table
+//Table inherits head
+
+pockets.__proto__ = bed;
+bed.__proto__ = table;
+table.__proto__ = head;
