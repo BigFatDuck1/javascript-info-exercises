@@ -3,13 +3,34 @@
 //TODO: Why do all of the shooters show the same value?
 // TODO: Fix the code so that they work as intended.
 
-function makeArmy() {
+
+//Solution 1: Using a for loop
+function makeArmy_for() {
+    let shooters = [];
+  
+    //let i = 0;
+
+    for (let i = 0; i < 10; i++) {
+      let shooter = function() { // create a shooter function,
+        console.log( i ); // that should show its number
+      };
+      shooters.push(shooter); // and add it to the array
+      //i++;
+    }
+  
+    // ...and return the array of shooters
+    return shooters;
+  }
+
+  //Solution 2: define i before function call
+  function makeArmy() {
     let shooters = [];
   
     let i = 0;
     while (i < 10) {
+        let index = i;
       let shooter = function() { // create a shooter function,
-        alert( i ); // that should show its number
+        console.log( index ); // that should show its number
       };
       shooters.push(shooter); // and add it to the array
       i++;
@@ -18,6 +39,7 @@ function makeArmy() {
     // ...and return the array of shooters
     return shooters;
   }
+  
   
   let army = makeArmy();
   
